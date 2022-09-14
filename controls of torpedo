@@ -1,0 +1,32 @@
+function fireTorpedo(e) {
+
+var row = e.target.id.substring(1,2);
+		
+    var col = e.target.id.substring(2,3);
+    
+    if (gameBoard[row][col] == 0) {
+			
+      e.target.style.background = 'lightblue';
+      
+      gameBoard[row][col] = 3;
+      
+      } else if (gameBoard[row][col] == 1) {
+			
+      e.target.style.background = 'red';
+      
+      gameBoard[row][col] = 2;
+      
+      hitCount++;
+      
+      if (hitCount == 19) {
+				
+        alert("");
+			}
+      
+      } else if (gameBoard[row][col] > 1) {
+			
+      alert("");
+		}		
+    }
+    
+    e.stopPropagation();
