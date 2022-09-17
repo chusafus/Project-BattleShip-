@@ -1,2 +1,0 @@
-function fireTorpedo(e) {
-  if (e.target !== e.currentTarget)
